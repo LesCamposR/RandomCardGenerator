@@ -26,6 +26,12 @@ let numbers = [
   "J",
   "K",
   "Q",
-  "a"
+  "A"
 ];
-console.log(icons);
+const execute = () => {
+  console.log("clicked");
+  for (let i = 0; i < icons.length; i++) {
+    console.log;
+    document.querySelector("#icons");
+  }
+};
