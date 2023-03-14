@@ -5,14 +5,10 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
-  //Hearts, Spades, Clubs and Diamonds
+let number = document.querySelector(".number");
+let topSuit = document.querySelector(".top-suit");
+let bottomSuit = document.querySelector(".bottom-suit");
 
-  console.log("Everything is working!");
-  document.querySelector("button").addEventListener("click", execute);
-};
-let icons = ["\u2665", "\u2660", "\u2663", "\u2666"];
 let numbers = [
   "2",
   "3",
@@ -28,10 +24,20 @@ let numbers = [
   "Q",
   "A"
 ];
+let icons = ["♦ ", "♥ ", "♠ ", "♣"];
+
+window.onload = function() {
+  //write your code here
+  //Hearts, Spades, Clubs and Diamonds
+  console.log("Everything is working!");
+  document.querySelector("button").addEventListener("click", execute);
+};
+
 const execute = () => {
   console.log("clicked");
-  for (let i = 0; i < icons.length; i++) {
-    console.log;
-    document.querySelector("#icons");
-  }
+  number.innerHTML = numbers[Math.floor(Math.random() * numbers.length)];
+  let iconchoosen = icons[Math.floor(Math.random() * icons.length)];
+  //iconchoosen == 0 || iconchoosen = 1 ? "redSymbol" : "blackSymbol";
+  topSuit.innerHTML = iconchoosen;
+  bottomSuit.innerHTML = iconchoosen;
 };
