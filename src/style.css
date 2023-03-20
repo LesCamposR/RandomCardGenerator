@@ -29,3 +29,10 @@
 body {
   box-sizing: border-box;
 }
+.redSymbol {
+  color: red;
+}
+
+.blackSymbol {
+  color: black;
+}
