@@ -17,7 +17,7 @@ let topSuit = document.querySelector(".top-suit");
 let bottomSuit = document.querySelector(".bottom-suit");
 
 const execute = () => {
-  let icons = ["♦ ", "♥ ", "♠ ", "♣"];
+  let icons = ["♦", "♥", "♠", "♣"];
   let Numbers = [
     "2",
     "3",
@@ -39,4 +39,12 @@ const execute = () => {
 
   topSuit.innerHTML = iconchoosen;
   bottomSuit.innerHTML = iconchoosen;
+  let colors = document.querySelectorAll(".color");
+  for (let i = 0; i < colors.length; i++) {
+    if (iconchoosen == "♦" || iconchoosen == "♥") {
+      colors[i].style.color = "red";
+    } else {
+      colors[i].style.color = "black";
+    }
+  }
 };
